@@ -1,0 +1,13 @@
+NUGET
+  remote: https://www.nuget.org/api/v2
+    BDDify (0.8)
+      RazorEngine (>= 2.1)
+    Microsoft.Web.Xdt (2.1.1)
+    NSubstitute (1.2)
+    NuGet.CommandLine (3.4.3)
+    NuGet.Core (2.11.1)
+      Microsoft.Web.Xdt (>= 2.1)
+    NUnit (2.5.10.11092)
+    RazorEngine (2.1)
+    Rx-Main (1.0.10621)
+    Shouldly (1.1)

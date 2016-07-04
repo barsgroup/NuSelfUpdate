@@ -48,7 +48,7 @@ namespace NuSelfUpdate
             var repository = _packageRepositoryFactory.CreateRepository(_packageSource);
             var latestPackage = repository.FindPackage(_appPackageId);
 
-            if (latestPackage == null || CurrentVersion >= latestPackage.Version)
+            if (latestPackage == null || CurrentVersion >= latestPackage.Version.Version)
                 return new UpdateNotFound();
 
             return new UpdateFound(latestPackage);
@@ -59,7 +59,7 @@ namespace NuSelfUpdate
             if (package == null || package.Id != _appPackageId)
                 throw new ArgumentNullException("package");
 
-            AssertCanUpdate(package.Version);
+            AssertCanUpdate(package.Version.Version);
 
             var prepDirectory = Path.Combine(_fileSystem.AppDirectory, ".updates", package.Version.ToString());
             var preparedFiles = new List<string>();
@@ -72,7 +72,7 @@ namespace NuSelfUpdate
                 preparedFiles.Add(targetPath);
             }
 
-            return new PreparedUpdate(package.Version, preparedFiles);
+            return new PreparedUpdate(package.Version.Version, preparedFiles);
         }
 
         public InstalledUpdate ApplyPreparedUpdate(IPreparedUpdate preparedUpdate)

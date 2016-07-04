@@ -10,3 +10,4 @@ build
 *VisualState.xml
 *csproj.user
 *_ReSharper*
+/packages/
