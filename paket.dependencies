@@ -1,9 +1,0 @@
-source https://www.nuget.org/api/v2
-nuget Bddify 0.8
-nuget NSubstitute 1.2.0.0
-nuget NuGet.CommandLine
-nuget NuGet.Core
-nuget NUnit 2.5.10.11092
-nuget RazorEngine 2.1
-nuget Rx-Main 1.0.10621
-nuget Shouldly 1.1.0.0
